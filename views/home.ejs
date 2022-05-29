@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs"); -%>
+
+<h1>Home</h1>
+<p> Welcome to the Blog Website </p>
+
+<% posts.forEach(function(posts){ %>
+  <h1><%=posts.postTitle %></h1>
+  <% var s = posts.postBody.slice(0,100);  %>
+  <p><%= s + " ..." %></p>
+  
+  <a href="/posts/<%=posts.postTitle%>">Read More</a>
+  <% }) %>
+
+
+
+
+
+<%- include("partials/footer.ejs"); -%>
